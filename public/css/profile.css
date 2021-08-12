@@ -1,0 +1,110 @@
+.titleContainer {
+    height: 53px;
+    padding: 0 var(--spacing);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--lightGrey);
+    flex-shrink: 0;
+  }
+  
+  .titleContainer h1 {
+    flex: 1;
+  }
+
+  .profileHeaderContainer .userImageContainer {
+    width: 132px;
+    height: 132px;
+    margin-left: var(--spacing);
+    position: absolute;
+    top: 150px;
+  }
+  
+  .profileHeaderContainer .userImageContainer img {
+    border: 4px solid #fff;
+  }
+  
+  .profileHeaderContainer .profileButtonsContainer {
+    text-align: right;
+    padding: var(--spacing);
+    min-height: 66px;
+  }
+  
+  .profileButton,
+  .followButton {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 60px;
+    display: inline-block;
+    margin-left: var(--spacing);
+  }
+
+  .coverPhotoContainer {
+    height: 180px;
+    background-color: var(--blue);
+    position: relative;
+  }
+
+  
+.followersContainer .value {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .followersContainer span:not(.value) {
+    color: var(--greyText);
+  }
+  
+  .followersContainer a {
+    margin-right: 15px;
+  }
+  
+  .followersContainer a:hover {
+    border-bottom: 1px solid #000;
+  }
+  
+  .tabsContainer {
+    display: flex;
+    border-bottom: 1px solid var(--lightGrey);
+    flex-shrink: 0;
+  }
+  
+  .tab {
+    flex: 1;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--greyText);
+    font-weight: bold;
+  }
+  
+  .tab.active {
+    color: var(--blue);
+    border-bottom: 2px solid var(--blue);
+  }
+  
+  .tab:hover {
+    color: var(--blue);
+    background-color: var(--blueBackground);
+  }
+
+
+  #msg-text:focus {
+    outline: none;
+  }
+  
+  #send-msg-btn {
+    border: none;
+    background: none;
+    background-color: var(--blue);
+    color: var(--lightGrey);
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  #all-msg-container {
+    list-style: none;
+  }
+  

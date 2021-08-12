@@ -1,0 +1,35 @@
+<%- include("../partials/header") %>
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/profile.css">
+
+</head>
+<body>
+
+<div class="row">
+    <%- include("../partials/navbar") %>
+    
+    <div class="main-content-container main-container col-10 col-md-8 col-lg-6">
+        <h1 class="fw-bold titleContainer">List Of All The Users</h1>
+        <!-- --------- -->
+
+        <div class="tabsContainer">
+            <a class="tab active" href="/profile/following">
+                <span>following</span>
+            </a>
+            <a class="tab" href="/profile/followers">
+                <span>followers</span>
+            </a>
+        </div>
+        <div class="pinnedPostContainer" style="display: none;"></div>
+        <div class="userPostsContainer">
+            <!-- <span class="noResults">Nothing to show.</span> -->
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 col-lg-4">Third Column</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/jQuery.js"></script>
+<script src="/js/common.js"></script>
+<%- include("../partials/footer") %>

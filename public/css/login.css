@@ -1,0 +1,62 @@
+body {
+  background-color: rgb(0, 0, 0);
+  font-family: 'Oswald', sans-serif;
+}
+
+.bird {
+  font-size: 40px;
+  padding-bottom: 7%;
+  color: rgb(217, 217, 217);
+}
+
+.bird:hover {color: #03a9f4}
+
+.logincontainer {
+  padding: 24px;
+  margin-top: 5% !important;
+  min-height: 400px;
+  max-width: 80vw;
+  max-height: 90vh;
+  height: 580px;
+  min-width: 600px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+h6 {
+  color: rgb(217, 217, 217);
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 28px;
+  padding-bottom: 4%;
+}
+
+.link {
+  color: rgb(27, 149, 224);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(133, 133, 133);
+  padding: 16px 12px;
+  color: rgb(217, 217, 217);
+}
+
+.form-control:focus {
+  color: rgb(217, 217, 217);
+  background-color: rgb(0 0 0 / 0%);
+}
+
+.logincontainer button, .commonbtn {
+  background-color: #0099ff;
+  border-radius: 20px;
+  max-width: inherit;
+}
+

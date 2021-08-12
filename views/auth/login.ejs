@@ -1,0 +1,49 @@
+<%- include("../partials/header") %>
+
+<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+<!-- Header ends here -->
+
+<div class="container">
+    <div class="row">
+        <div id="1st_col" class="col-lg-3"></div>
+        <div id="2nd_col" class="col-lg-6 mt-3 logincontainer">
+            <a class="link" href="/"><i class="fab fa-twitter bird"></i></a><br>
+            <h6>Log in to Twitter</h6>
+
+            <%- include("../partials/flash") %>
+            
+            <form class="mt-3" action="/login" method="POST">
+                <div class="mb-3">
+                  <input type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="User Name"
+                  name="username">
+                </div>
+
+                <div class="mb-3">
+                  <input type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  name="password">
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">Login</button>
+                </div>
+
+                <div class="mb-3 mt-3">
+                    <p>Need an account ? <a href="/register">Register here</a></p>
+                </div>
+                
+              </form>
+        </div>
+        <div id="3rd_col" class="col-lg-3"></div>
+    </div>
+</div>
+
+<%- include("../partials/footer") %>
