@@ -1,5 +1,5 @@
 body {
-    background-color: #000000;
+    background-color: #122731;;
     color: white;
     font-family: 'Oswald', sans-serif;
 }
@@ -9,7 +9,7 @@ body {
     flex-flow: column;
 }
 
-.TwitterBg img {
+.AccusoftBg img {
     width: 100%;
     height: 85vh;
 }
@@ -25,7 +25,6 @@ body {
 }
 
 button{
-    /* line-height: -9px; */
     align-items: center;
     justify-content: center;
     border: 0 solid black;
@@ -39,12 +38,6 @@ button{
     border-radius: 9999px;
     font-weight: 700;
     font-size: 15px;
-    /* overflow-wrap: break-word; */
-    /* flex-direction: row; */
-    /* display: flex; */
-    /* box-sizing: border-box; */
-    /* font: 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; */
-    /* flex: 1; */
     min-width: 48px;
 }
 
@@ -68,12 +61,11 @@ h1 {
     font-size: 12em;
 }
 
-.tweetSvg {font-size: 3em;}
+.accSvg {font-size: 6em;}
 
 .signUp {
     background-color: rgb(29, 161, 242);
     color: rgb(255, 255, 255);
-    
     transition-property: background-color, box-shadow;
     transition-duration: 0.2s;
 }
@@ -100,7 +92,9 @@ h1 {
     font-size: 13px;
     font-weight: 400;
     list-style-type: none;
-    
+    position: absolute;
+    left: 50em;
+    padding-top: 3em;
 }
 
 li {

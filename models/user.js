@@ -22,25 +22,7 @@ const userSchema = new mongoose.Schema({
     profilePic: {
         type: String,
         default: '/images/profilePic.jpeg'
-    },
-    likes:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:'Post'
-        }
-    ],
-    followers:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:'User'
-        }
-    ],
-    following:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:'User'
-        }
-    ]
+    }
 });
 
 // in order to use passport local mongoose, we have to plugin to it

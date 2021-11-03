@@ -1,15 +1,15 @@
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: #122731;
   font-family: 'Oswald', sans-serif;
 }
 
-.bird {
-  font-size: 40px;
+.acc {
+  font-size: 4em;
   padding-bottom: 7%;
   color: rgb(217, 217, 217);
 }
 
-.bird:hover {color: #03a9f4}
+.acc:hover {color: #03a9f4}
 
 .logincontainer {
   padding: 24px;

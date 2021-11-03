@@ -39,33 +39,26 @@ router.get('/login', (req, res) => {
     res.render('auth/login');
 });
 
+//  To get the profile page
+router.get('/profile', (req, res) => {
+    // console.log(req.body);
+    res.render('layouts/profilePage');
+});
+
 // Login the user
 router.post('/login', passport.authenticate('local',
     {
         failureRedirect: '/login',
         failureFlash:true
     }), async (req, res) => {
-        // after successful login redirect to tweet
-        res.redirect('/tweet');
+        // after successful login redirect to profile
+        res.redirect('/profile');
 });
-
-// To get the tweet page
-router.get('/tweet', (req, res) => {
-    // console.log(req.body);
-    res.render('layouts/home');
-});
-
-// To get the tweet page
-router.get('/list', (req, res) => {
-    // console.log(req.body);
-    res.render('layouts/list');
-});
-
 
 // Logout
 router.get('/logout', (req, res) => {
     req.logout();
-    // after successful logout redirect to home
+    // after successful logout redirect to profile
     res.redirect('/');
 });
 

@@ -9,14 +9,10 @@ const User = require('./models/user');
 const flash = require('connect-flash');
 const { isLoggedIn } = require('./middleware');
 const http = require('http');
-// 15. use express to handle the request from server
 const server = http.createServer(app);
-const socketio = require('socket.io');
-const io = socketio(server);
-const Chat = require("./models/chat");
 
 // 1. mongoose connection
-mongoose.connect('mongodb://localhost:27017/twitter-clone',
+mongoose.connect('mongodb://localhost:27017/demo-project',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -40,11 +36,6 @@ app.use(express.json());
 
 // 5. import routes
 const authRoutes = require('./routes/auth');
-const profileRoutes = require('./routes/profileRoutes');
-const chatRoutes = require("./routes/chatRoute");
-
-// 12. import APIs
-const postApiRoute = require('./routes/api/posts');
 
 // 4. set sessions 
 app.use(session({
@@ -73,21 +64,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// 10. add middleware isLoggedIn
-// 3. display page
-// app.get('/', isLoggedIn, (req, res) => {
-//     // res.send("Welcome Home");
-//     // using view engine & views we can render home page
-//     res.render('layouts/main-layout');
-// });
-//  or
-// 3. To get the home page
-// console.log(req.body);
-// res.render('layouts/main-layout');
-// app.get('/', (req, res) => {
-//     res.render('layouts/home');
-//     console.log(res.json(req.body));
-// });
 app.get('/', (req, res) => {
     // console.log(req.body);
     res.render('layouts/main-layout');
@@ -95,35 +71,7 @@ app.get('/', (req, res) => {
 
 // 6. using routes
 app.use(authRoutes);
-app.use(profileRoutes);
-app.use(chatRoutes);
 
-// 13. using APIs
-app.use(postApiRoute);
-
-// 15. connection with io
-// http://localhost:3000/socket.io/socket.io.js
-io.on('connection', (socket) => {
-    console.log("io connected");
-
-    socket.on("send-msg", async (data) => {
-        // console.log(data);
-
-        io.emit("recived-msg", {
-            user: data.user,
-            msg: data.msg,
-            createdAt: new Date(),
-        });
-
-        await Chat.create({
-            content: data.msg,
-            user: data.user
-        });
-    });
-});
-
-// 2. server working on this port
-// app.listen(3000, () => {
 server.listen(process.env.PORT||3000, () => {
     console.log("Server running at port 3000");
 });
